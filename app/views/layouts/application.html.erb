@@ -5,10 +5,81 @@
   <%= stylesheet_link_tag "application", :debug => false %>
   <%= javascript_include_tag "application", :debug => false %>
   <%= csrf_meta_tags %>
+  <link rel="icon" type="image/vnd.microsoft.icon" href="http://www.apple.com/favicon.ico" />
 </head>
 <body style="background-image:url('http://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/BinaryBackdrop.jpg/300px-BinaryBackdrop.jpg');">
+<div id="header">
+	<h1>Twitter</h1>
+	<div class="menulinks">
+<%= link_to 'My Posts', posts_path %>
+<%= link_to 'Home', root_path %>
+<%= link_to 'Login', posts_path %>
+<%= link_to 'Friends', root_path %>
+<%= link_to 'Followers', root_path %>
+</div>
+</div>
+<div id="colmask">
+	<div id="colmid">
+		<div id="colright">
+			<div id="col1wrap">
+				<div id="col1pad">
+					<div id="col1">
+						<!-- Column 1 start -->
+							<%= yield %>
+						<!-- Column 1 end -->
+					</div>
+				</div>
 
-<%= yield %>
+			</div>
+			<div id="col2">
+				<!-- Column 2 start -->
+				
+    
+    <div class="list">
+    <dl>
+   <dt>My Interests are</dt>
+   <dd>
+    <ul>
+     <li>Playing Guitar</li>
+     <li>Watching Tv
+     <ul>
+     <li>Friends</li>
+     <li>the big Bang theory</li>
+     <li>30 rock</li>
+     </ul></li>
+     <li>Eating</li>
+     <li>Going to the movies</li>
+   </ul>
+   </dd>
+</dl>
+	</div>
+	<form >
+Ingrese el numero: <input type="text" id="numero" value="0" /><br />
+Factorial: <input type="text" id="Factorial" value="0" /><br />
+Factorial recursivo: <input type="text" id="Factorialrecursivo" value="0" /><br />
+<input type="button" value="calcular" onclick="validate()" />
+</form>
+				<!-- Column 2 end -->
+			</div>
+			<div id="col3">
+				<!-- Column 3 start -->
+				<h3>Things I do not understand about this layout</h3>
+				<p>Why is there a mixture of percentage and pixel based layout, why does it have so many diferent divs, do they control the text or just the background. I beleive that things are moed by pixels to fit column width, but if that is the case then why is the width expressed, cant you just leave it pixel based. The percentage base is all crazy i set it at 100 percent but its like 20 % which i dont understand cause percentages are abslute!! </p>
+				<h3>Things I do understand about this layout</h3>
+				<p>Not much, i understand that there are different divs cause if not the backgrounds would overlap, that the mid column has been moved by 200 pixels to the right to fit the first column and that the third column is moved to the left by -400 pixels for the same reason, to move it to 200 pixels to the right of the screen but why cant you set it to 200 pixels right i dont know. I dont understan how the percentages are calculated!!!! i thought it was the percent of the father component, which is not the way things are working here, at least i think so. The third column is 100% of the mid one so it should be the same size shouldnt it!!! The backgrounds i think at least i get them, the col mask is backround of the whole page, its the real one i think, and it affects the left column cause it is the one thats directly on the page and not moved.
+				</p>
+				<!-- Column 3 end -->
+
+			</div>
+		</div>
+	</div>
+</div>
+<div id="footer">
+	<p>This page uses the <a href="http://matthewjamestaylor.com/blog/holy-grail-no-quirks-mode.htm">Holy Grail Liquid-Layout: No quirks mode</a> by <a href="http://matthewjamestaylor.com">Matthew James Taylor</a></p>
+
+</div>
+
+
 
 </body>
 </html>
