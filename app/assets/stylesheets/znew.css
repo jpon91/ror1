@@ -8,7 +8,7 @@ body {
  }
 body {
     background: none repeat scroll 0 0 #FFFFFF;
-	background-image:url('http://prop69.com/images/backgrounds/binary-code-background.jpg');
+
     font-size: 90%;
     margin: 0;
     min-width: 600px;
@@ -17,12 +17,10 @@ body {
 }
 a {
     color: #336699;
+	width: 100%;
+  height: 80%;
 }
-a:hover {
-    background: none repeat scroll 0 0 #336699;
-    color: #FFFFFF;
-    text-decoration: none;
-}
+
 
 h1, h2, h3 {
     margin: 0.8em 0 0.2em;
@@ -37,6 +35,7 @@ img {
 }
 #header {
     border-bottom: 1px solid #000000;
+	overflow: hidden;
     float: left;
     margin: 0;
     padding: 0;
@@ -55,8 +54,11 @@ img {
     padding: 0.2em 15px 0.7em;
 }
 #colmask {
-    background: none repeat scroll 0 0 #ccD8B7;
-	
+    background: none no-repeat scroll 100 100 #94CEDE;
+	background-image:url('izquierda.png');
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:0% 100%; 
     clear: both;
     float: left;
     overflow: hidden;
@@ -65,14 +67,18 @@ img {
 }
 #colmid {
     background: none repeat scroll 0 0 #FFFFFF;
-	background-image:url('picture1.png');
+	
     float: left;
     left: 200px;
     position: relative;
     width: 200%;
 }
 #colright {
-    background: none repeat scroll 0 0 #3FdF99;
+    background: none repeat scroll 0 0 #94CEDE;
+	background-image:url('derecha.png');
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:100% 100%; 
     float: left;
     left: 50%;
     margin-left: -400px;
@@ -144,25 +150,49 @@ a:link,a:visited
 {
 display:inline;
 font-weight:bold;
-background-color:#C70434;
+/*background-color:#C70434;*/
 color:#3A0596;
-width:120px;
+width: 100%;
+  height: 80%;
 text-align:center;
 padding:4px;
 text-decoration:none;
 }
-a:hover,a:active
-{
-background-color:#7A991A;
-}
+
 .menulinks a {
-    color: #17B7BF;
-	background-color: #2161CF;
+    color: #1725BF;
+	width: 100%;
+  height: 80%;
+	/*background-color: #2161CF;*/
 }
-.menulinks a:hover {
-    background: none repeat scroll 0 0 #0BD3DE;
-    color: #17B7BF;
+.menulinks .redondo:hover {
+    background: none repeat scroll 0 0 none;
+    color: #0F1669;
     text-decoration: none;
+width: 100%;
+  height: 80%;
+	-moz-border-radius: 1em 3em 1em 3em;
+border-radius: 1em 3em 1em 3em;
+
+/* IE10 */ 
+background-image: -ms-linear-gradient(top, #5D98EF 0%, #FFFFFF 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top, #5D98EF 0%, #FFFFFF 100%);
+
+/* Opera */ 
+background-image: -o-linear-gradient(top, #5D98EF 0%, #FFFFFF 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #5D98EF), color-stop(1, #FFFFFF));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top, #5D98EF 0%, #FFFFFF 100%);
+
+/* Proposed W3C Markup */ 
+background-image: linear-gradient(top, #5D98EF 0%, #FFFFFF 100%);
+width: 100%;
+  height: 80%;
 }
 ul
 {
@@ -171,12 +201,60 @@ padding:0px;
 margin:0px;
 }
 .redondo{
-background-color:red;
-height: 3em;
-width: 5em;
+float:left;
+background-color:#678EB5;
+
+
 -moz-border-radius: 1em 3em 1em 3em;
 border-radius: 1em 3em 1em 3em;
+/* IE10 */ 
+background-image: -ms-linear-gradient(top, #00A3EF 0%, #FFFFFF 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top, #00A3EF 0%, #FFFFFF 100%);
+
+/* Opera */ 
+background-image: -o-linear-gradient(top, #00A3EF 0%, #FFFFFF 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #00A3EF), color-stop(1, #FFFFFF));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top, #00A3EF 0%, #FFFFFF 100%);
+
+/* Proposed W3C Markup */ 
+background-image: linear-gradient(top, #00A3EF 0%, #FFFFFF 100%);
 }
+
+
+buttons {
+  width: 300px;
+  height: 100px;
+  border: solid #EEE;
+  
+}
+buttons a{
+	background-color:none;
+	display: block;
+  width: 100%;
+  height: 80%;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+#m{
+background-color:none;
+	display: block !important;
+  width: 100% !important;
+  height: 80% !important;
+  text-decoration: none;
+  cursor: pointer;
+  
+}
+
+
 
 li 
 {
