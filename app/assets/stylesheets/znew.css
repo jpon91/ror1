@@ -164,8 +164,10 @@ margin:0px;
 }
 .redondo{
 background-color:red;
--moz-border-radius-bottomright: 50px 25px;
-border-bottom-right-radius: 50px 25px;
+height: 5em;
+width: 12em;
+-moz-border-radius: 1em 4em 1em 4em;
+border-radius: 1em 4em 1em 4em;
 }
 
 li 
