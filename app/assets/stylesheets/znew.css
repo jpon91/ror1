@@ -67,7 +67,8 @@ img {
 }
 #colmid {
     background: none repeat scroll 0 0 #FFFFFF;
-	
+	-moz-border-radius: 15px;
+border-radius: 15px;
     float: left;
     left: 200px;
     position: relative;
