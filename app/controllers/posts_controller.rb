@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
- 
+	@title = "Posts"
     @posts = Post.all
 	
     respond_to do |format|
@@ -15,6 +15,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
+	@title = "Post #{params[:id]}"
 
     respond_to do |format|
       format.html # show.html.erb
@@ -26,7 +27,7 @@ class PostsController < ApplicationController
   # GET /posts/new.json
   def new
     @post = Post.new
-
+	@title = "New Post"
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @post }
@@ -35,7 +36,9 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+ 
     @post = Post.find(params[:id])
+	 @title = "Edit Post #{params[:id]}"
   end
 
   # POST /posts
