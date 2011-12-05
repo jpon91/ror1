@@ -1,9 +1,22 @@
 Ror1::Application.routes.draw do
+  get "users/new"
+
+  get "pages/about"
+   match '/contact', :to => 'pages#contact'
+  match '/about',   :to => 'pages#about'
+  match '/signup',  :to => 'users#new'
+
+
+  get "pages/contact"
+
   resources :posts do
 	resources :comments
 end
 
   get "welcome/index"
+  match '/contact', :to => 'pages#contact'
+  match '/about',   :to => 'pages#about'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

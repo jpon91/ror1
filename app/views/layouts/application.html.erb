@@ -4,7 +4,10 @@
   <title><%= title %></title>
   <%= stylesheet_link_tag "application", :debug => false %>
   <%= javascript_include_tag "application", :debug => false %>
-  
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	
+  <![endif]-->    
   <%= csrf_meta_tags %>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <link rel="icon" 
@@ -22,8 +25,8 @@
 	
 	<div class="butttons redondo" style="width:100px;height:30px;"><a id="m" href="/">Friends</a></div>
 	<div class="butttons redondo" style="width:100px;height:30px;"><a id="m" href="/">Followers</a></div>
-	<div class="butttons redondo" style="width:100px;height:30px;"><a id="m" href="/">About</a></div>
-	<div class="butttons redondo" style="width:100px;height:30px;"><a id="m" href="/">Contact</a></div>
+	<div class="butttons redondo" style="width:100px;height:30px;"><a id="m" href="/about">About</a></div>
+	<div class="butttons redondo" style="width:100px;height:30px;"><a id="m" href="/contact">Contact</a></div>
 	<div class="butttons redondo" style="width:100px;height:30px;"><a id="m" href="/">Login</a></div>
 </div>
 <div id="colmask">
@@ -41,7 +44,7 @@
 			</div>
 			<div id="col2">
 				<!-- Column 2 start -->
-				<%= render 'form2' %>
+				<%= render 'posts/form2' %>
     
     <div class="list">
     <dl>
