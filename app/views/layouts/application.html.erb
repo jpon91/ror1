@@ -22,12 +22,25 @@
 	<div class="menulinks" style="position:relative;left:20%;">
 	<div class="butttons redondo" style="width:100px;height:30px;"><a id="m" href="/posts">My Posts</a></div>
 	<div class="butttons redondo" style="width:100px;height:30px;"><a id="m" href="/">Home</a></div>
-	
+	<% if signed_in? %>
+	<div class="butttons redondo" style="width:100px;height:30px;"><%= link_to "Profile", current_user, :id => 'm' %></div>
+      
+      <% end %>
 	<div class="butttons redondo" style="width:100px;height:30px;"><a id="m" href="/">Friends</a></div>
 	<div class="butttons redondo" style="width:100px;height:30px;"><a id="m" href="/">Followers</a></div>
 	<div class="butttons redondo" style="width:100px;height:30px;"><a id="m" href="/about">About</a></div>
 	<div class="butttons redondo" style="width:100px;height:30px;"><a id="m" href="/contact">Contact</a></div>
-	<div class="butttons redondo" style="width:100px;height:30px;"><a id="m" href="/">Login</a></div>
+	
+	<% if signed_in? %>
+	<div class="butttons redondo" style="width:100px;height:30px;"><%= link_to "Sign out", signout_path, :method => :delete, :id => 'm' %></div>
+      
+      
+      <% else %>
+	  <div class="butttons redondo" style="width:100px;height:30px;"><%= link_to "Sign in", signin_path, :id => 'm'  %></div>
+      
+      <% end %>
+	
+	
 </div>
 <div id="colmask">
 	<div id="colmid">
@@ -36,6 +49,9 @@
 				<div id="col1pad">
 					<div id="col1">
 						<!-- Column 1 start -->
+							<% flash.each do |key, value| %>
+							<div class="flash <%= key %>"><%= value %></div>
+							<% end %>
 							<%= yield %>
 						<!-- Column 1 end -->
 					</div>

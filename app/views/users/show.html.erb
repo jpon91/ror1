@@ -1,1 +1,7 @@
+<h1>
+	<%= image_tag "face.png", :alt => @user.name, :class => "imagenes", :size => "100x100" %>
+  <%= @user.name %>
+</h1>
 <%= @user.name %>, <%= @user.email %>
+<%= link_to user_path(@user), user_path(@user) %>
+<%= link_to "Settings", edit_user_path(current_user) %>

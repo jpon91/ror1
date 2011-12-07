@@ -3,6 +3,9 @@ font-family: twitter_font;
 src: url(/fonts/twit.ttf);
 font-style:normal; font-weight:200;
 }
+.flash{
+	color:green;
+}
 body {
  font-family: twitter_font,sans-serif; 
  }
